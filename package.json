@@ -1,0 +1,24 @@
+{
+  "name": "gerald",
+  "version": "1.0.0",
+  "description": "1. # EVENTLOOP\r Because Javascript is singlethreaded, it means it executes tasks in a FIFO basis. Tasks that are not done are sent to an Event queue, waiting to be completed. A Loop checks this Queue to make sure it keeps churning out tasks until all are done. This Loop is called the Event Loop\r 2. # Explain the 6 phases of the event loop \r 1. Timers phase: We have the setTimers phase(setInterval and setTimeOut)- these are kept in a heap memory until they are expired. If these timers get expired then the event loop takes this expired timers and starts executing them. Any timers set to 0 ms and setImmediate() run here\r 2. Pending Callbacks: The loop executes any system related callbacks if any\r 3. Idle/Prepare: In this phase the event loop does nothing. It is idle and prepares to go to the next phase\r 4. Poll Phase: It watches out for I/O callbacks.  Nearly all the callbacks except the setTimeout, setInterval, setImmediate and closing callbacks are executed.\r 5. Check/setImmediate: executes any setImmediate timers added to the poll phase. \r 6. Closing: it executes callbacks associated with closing events like socket.on(process.exit)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogensogens/NPM-INIT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogensogens/NPM-INIT/issues"
+  },
+  "homepage": "https://github.com/ogensogens/NPM-INIT#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "joi": "^17.9.1",
+    "mongoose": "^7.0.3"
+  }
+}
